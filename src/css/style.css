@@ -230,19 +230,24 @@ hr {
 
 .section-produtos {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+}
+
+.wrapper-section {
+    width: 24%;
 }
 
 .aba-categorias {
-    width: 24%;
+    width: 100%;
+    height: 600px;
     border: 1px solid #e6e0e0;
     border-radius: 8px;
     padding: 20px 40px;
 }
 
 .aba-categorias h3 {
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
+    text-align: left;
 }
 
 .categoria-list li {
@@ -276,7 +281,7 @@ hr {
 }
 
 .grid-produtos .card {
-    width: 460px;
+    width: 100%;
     height: 140px;
     display: flex;
     align-items: center;
@@ -289,13 +294,31 @@ hr {
     margin-left: 20px;
 }
 
+.wrapper-content h3 {
+    color: #212222;
+    font-weight: bold;
+}
+
+.category {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #3d3d3d;
+}
+
+.price {
+    color: #2d9acc;
+    font-weight: bold;
+}
+
 .price p {
+    font-size: 20px;
     display: inline-block;
 }
 
 .valueOld {
     text-decoration: line-through;
-    color: #c5c1c1;
+    color: #8f8f8f;
+    margin-left: 10px;
 }
 
 .imagem-produto {
