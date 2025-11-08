@@ -462,6 +462,65 @@ hr {
     background-color: #e6e0e0;
 }
 
+
+/* banner 2 */
+
+.section-banner2 {
+    height: 400px;
+    background-image: url(/src/img/bANNER.png) !important;
+    background-color: #2d9acc;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 80px;
+    border-radius: 16px;
+    color: white;
+
+    margin: 0 6% 50px ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.section-banner2 h2 {
+    color: #15709b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-banner2 h1 {
+    width: 60%;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.section-banner2 p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.section-banner2 button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none;
+
+    color: #166386;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    opacity: .9;
+}
+
+.section-banner2 button:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    opacity: 1;
+}
+
 @media (max-width: 900px) {
     .header {
         padding: 16px 40px;
