@@ -178,7 +178,7 @@ hr {
     justify-content: space-between;
     width: 100%;
     padding: 50px 0;
-    gap: 10px;
+    gap: 20px;
 }
 
 .section-cards .card {
@@ -224,6 +224,10 @@ hr {
 
 /* section de produtos */
 
+.title {
+    margin: 0 0 20px 0;
+}
+
 .section-produtos {
     display: flex;
     gap: 20px;
@@ -236,12 +240,62 @@ hr {
     padding: 20px 40px;
 }
 
+.aba-categorias h3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.categoria-list li {
+    cursor: pointer;
+    
+}
+
+.categoria-list li a {
+    display: block;
+    color: #212222;
+    padding: 15px 0;
+
+    transition: 2s all;
+}
+
+.categoria-list li a:hover {
+    color: #2d9acc;
+    background: linear-gradient(90deg,#21222200, #21222234, #2122225d);
+    border-radius: 8px;
+}
+
+
 .aba-produtos {
     width: 75%;
 }
 
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .grid-produtos .card {
+    width: 460px;
+    height: 140px;
     display: flex;
+    align-items: center;
+    border: 1px solid #e6e0e0;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.wrapper-content {
+    margin-left: 20px;
+}
+
+.price p {
+    display: inline-block;
+}
+
+.valueOld {
+    text-decoration: line-through;
+    color: #c5c1c1;
 }
 
 .imagem-produto {
