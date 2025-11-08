@@ -165,6 +165,8 @@ hr {
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     opacity: .9;
+
+    transition: .5s all;
 }
 
 .section-banner button:hover {
@@ -512,6 +514,8 @@ hr {
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     opacity: .9;
+
+   
 }
 
 .section-banner2 button:hover {
