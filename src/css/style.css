@@ -464,6 +464,67 @@ hr {
     background-color: #e6e0e0;
 }
 
+/* sessão produtos 2 */
+
+.section-produtos2 {
+    margin: 50px 0;
+}
+
+.section-produtos2 h2 {
+    padding: 20px 0;
+}
+
+.grid-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+}
+
+.image-produto {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.grid-products .card {
+    padding: 15px;
+    border: 1px solid #e6e0e0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-products .card h3 {
+    color: #161617;
+}
+
+.grid-products .card > p {
+    color: #696969;
+}
+
+.grid-products .badge-tag {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.grid-products .badge-off {
+    background: linear-gradient(135deg, #25b8d4, #16789a);
+    box-shadow: 0 8px 16px rgba(22, 120, 154, 0.35);
+}
+
+.grid-products .badge-sale {
+    background: linear-gradient(135deg, #ff7b7b, #f13b3b);
+    box-shadow: 0 8px 16px rgba(241, 59, 59, 0.35);
+}
+
 
 /* banner 2 */
 
