@@ -197,7 +197,12 @@ hr {
 
 .section-cards .foto {
     width: 80px;
+    height: 80px;
     border-radius: 8px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .wrapper-content {
