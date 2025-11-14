@@ -13,15 +13,15 @@
     --bg: #ffffff;
     --surface: #ffffff;
     --text: #212222;
-    --muted: #696969;
+    --muted: #505050;
     --accent: #2d9acc;
 }
 
 body.dark-theme{
-    --bg: #1d1d1d;
-    --surface: #1a1a1a;
+    --bg: #0f0f0f;
+    --surface: #111010;
     --text: #e6eef6;
-    --muted: #9aa6b2;
+    --muted: #ffffff;
     --accent: #4fd1e0;
     background-color: var(--bg);
     color: var(--text);
@@ -77,8 +77,9 @@ body{
     border-radius: 999px;
     display: inline-block;
     position: relative;
-    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
+    background: linear-gradient(90deg,#65a4f6, #8785fd);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    cursor: pointer;
     transition: background .2s ease, box-shadow .2s ease;
 }
 .theme-switch .switch-track .sun-icon,
