@@ -7,6 +7,115 @@
     font-family: "Inter", sans-serif;
 }
 
+
+
+:root{
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --text: #212222;
+    --muted: #696969;
+    --accent: #2d9acc;
+}
+
+body.dark-theme{
+    --bg: #1d1d1d;
+    --surface: #1a1a1a;
+    --text: #e6eef6;
+    --muted: #9aa6b2;
+    --accent: #4fd1e0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.header, .card, .card-destaque, .aba-categorias, .aba-recomended, .grid-products .card, .grid-produtos .card {
+    background-color: var(--surface);
+    transition: background-color .25s ease, box-shadow .25s ease;
+}
+
+.theme-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    color: var(--text);
+    margin-left: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.theme-toggle i{font-size:18px}
+
+.theme-toggle:focus{outline: 2px solid rgba(45,154,204,0.18)}
+
+.dark-theme .badge-off{box-shadow: 0 8px 20px rgba(22,120,154,0.18)}
+.dark-theme .badge-sale{box-shadow: 0 8px 20px rgba(241,59,59,0.18)}
+
+.theme-switch{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 12px;
+}
+.theme-switch input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.theme-switch .switch-track{
+    width: 56px;
+    height: 30px;
+    border-radius: 999px;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    transition: background .2s ease, box-shadow .2s ease;
+}
+.theme-switch .switch-track .sun-icon,
+.theme-switch .switch-track .moon-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--muted);
+    pointer-events: none;
+}
+.theme-switch .switch-track .sun-icon{ right: 8px }
+.theme-switch .switch-track .moon-icon{ left: 8px }
+.theme-switch .switch-thumb{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: transform .18s cubic-bezier(.2,.9,.3,1), background .18s ease;
+}
+
+.theme-switch input:checked + .switch-track{
+    background: linear-gradient(90deg, #f6d365, #fda085);
+}
+.theme-switch input:checked + .switch-track .switch-thumb{
+    transform: translateX(26px);
+    background: #fff;
+}
+
+.dark-theme .theme-switch .switch-track{ background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); }
+.dark-theme .theme-switch .switch-thumb{ background: #0b1220 }
+
+
 /* reset default */
 a {
     text-decoration: none;
@@ -46,6 +155,8 @@ ul {
 }
 
 .input-search {
+    background-color: var(--surface);
+    color: var(--text);
     width: 60% ;
     height: 40px;
     padding: 12px 44px 12px 12px;
@@ -105,6 +216,11 @@ hr {
 
 .nav-items a {
     color: #212222;
+}
+
+.icones a svg {
+    fill: var(--text)!important;
+    transition: .5s all;
 }
 
 .nav-items a:hover {
