@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tecno Loja</title>
 </head>
@@ -27,9 +28,40 @@
         <div class="icones">
             <a href="#user"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="40px" fill="#000"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></a>
             <a href="#favorito"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg></a>
-            <a href="#carrinho"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg></a>
+            <button id="cart-btn" class="cart-btn" aria-label="Abrir carrinho">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg>
+                <span class="cart-count">0</span>
+            </button>
         </div>
     </header>
+    
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Meu Carrinho</h2>
+            <button id="close-cart" class="close-cart" aria-label="Fechar carrinho">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items serão inseridos dinamicamente -->
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Seu carrinho está vazio</p>
+                <small>Adicione produtos para começar suas compras</small>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+            <button class="continue-shopping" id="continue-shopping">Continuar Comprando</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+    
     <hr>
     <nav class="nav-items">
         <a href="">EMPRESAS</a>
@@ -52,28 +84,28 @@
                 <img class="foto" src="/src/img/produtos/KIT-5.png" alt="">
                 <div class="wrapper-content">
                     <h3>Bonés</h3>
-                    <button>detalhes</button>
+                    <button onclick="window.cartManager.addToCart({id: 1, name: 'Boné Dev', price: 59.90, image: '/src/img/produtos/KIT-5.png'})">Adicionar ao carrinho</button>
                 </div>
             </div>
             <div class="card">
                 <img class="foto" src="/src/img/produtos/KIT-6.webp" alt="">
                 <div class="wrapper-content">
                     <h3>Canecas</h3>
-                    <button>detalhes</button>
+                    <button onclick="window.cartManager.addToCart({id: 2, name: 'Caneca Programador', price: 39.90, image: '/src/img/produtos/KIT-6.webp'})">Adicionar ao carrinho</button>
                 </div>
             </div>
             <div class="card">
                 <img class="foto" src="/src/img/produtos/KIT-1.webp" alt="">
                 <div class="wrapper-content">
                     <h3>Camisetas</h3>
-                    <button>detalhes</button>
+                    <button onclick="window.cartManager.addToCart({id: 3, name: 'Camiseta Código', price: 79.90, image: '/src/img/produtos/KIT-1.webp'})">Adicionar ao carrinho</button>
                 </div>
             </div>
             <div class="card">
                 <img class="foto" src="/src/img/produtos/KIT-4.webp" alt="">
                 <div class="wrapper-content">
                     <h3>Moletom</h3>
-                    <button>detalhes</button>
+                    <button onclick="window.cartManager.addToCart({id: 4, name: 'Moletom Tech', price: 129.90, image: '/src/img/produtos/KIT-4.webp'})">Adicionar ao carrinho</button>
                 </div>
             </div>
         </section>
@@ -644,5 +676,5 @@
     </footer>
 </body>
     <script src="/src/JS/theme.js"></script>
-</html>
+    <script src="/src/JS/cart.js"></script>
 </html>
