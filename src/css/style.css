@@ -685,7 +685,7 @@ hr {
 
 .promotions {
     background-color: #ffffffb2;
-    padding: 80px 40px;
+    padding: 50px 40px;
     text-align: center;
     border-radius: 12px;
 
@@ -694,6 +694,11 @@ hr {
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .promotions button {
@@ -710,9 +715,14 @@ hr {
     color: white;   
 }
 
+.logo {
+    width: 170px;
+    margin: 30px auto;
+}
+
 .promotions h2 {
     margin: 10px 0;
-    color: var(--text);
+    color: #161617;
 }
 
 .promotions p {
