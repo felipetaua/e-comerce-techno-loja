@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/cart.css">
+     <link rel="stylesheet" href="../src/css/empresa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../favicon.png">
+    <title>Sobre a Empresa</title>
+</head>
+<body>
+    <header class="header">
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu de navegação">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <img class="logo" src="../src/img/logo_sem_fundo.png" alt="logo da empresa">
+            <div class="search-wrapper">
+                <input class="input-search" type="search" id="search-bar" name="search" placeholder="Busque pelo produto dev " />
+                <button type="button" class="search-btn" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                </button>
+            </div>
+            <label class="theme-switch" title="Alternar tema">
+                <input id="theme-toggle" type="checkbox" aria-label="Alternar tema">
+                <span class="switch-track">
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <span class="switch-thumb"></span>
+                </span>
+            </label>
+        <div class="icones">
+            <a href="#user"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="40px" fill="#000"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></a>
+            <a href="#favorito"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg></a>
+            <button id="cart-btn" class="cart-btn" aria-label="Abrir carrinho">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-mobile-menu" id="close-mobile-menu" aria-label="Fechar menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+            <li><a href="#"><i class="fa-solid fa-headphones"></i> Headphones</a></li>
+            <li><a href="#"><i class="fa-solid fa-keyboard"></i> Teclados</a></li>
+            <li><a href="#"><i class="fa-solid fa-mouse"></i> Mouse</a></li>
+            <li><a href="#"><i class="fa-solid fa-microchip"></i> Processadores</a></li>
+            <li><a href="#"><i class="fa-solid fa-memory"></i> Placas de vídeo</a></li>
+            <li><a href="#"><i class="fa-solid fa-desktop"></i> Monitores</a></li>
+            <li><a href="#"><i class="fa-solid fa-laptop"></i> Notebooks</a></li>
+            <li><a href="#"><i class="fa-solid fa-tablet"></i> Tablets</a></li>
+            <li><a href="#"><i class="fa-solid fa-mobile"></i> Smartphones</a></li>
+        </ul>
+    </nav>
+    
+    <main class="main">
+       <div class="wrapper-imagen-empresa"> <img class="imagen-empresa" src="../src/img/empresa/TecnoLoja.png" alt=""></div>
+        <section class="section-empresa">
+            <h2>Sobre a Empresa</h2>
+            <P>
+                A <strong>TecnoLoja</strong> nasceu com o propósito de levar a cultura da programação
+                para o cotidiano de quem respira tecnologia. Aqui você encontra produtos exclusivos
+                como camisetas, canecas, mochilas, garrafas e acessórios com estampas feitas
+                e specialmente para desenvolvedores.
+            </P>
+        </section>
+       
+        <section class="section-missao">
+            <h2>Nossa missão</h2>
+            <p>
+                Tornar o universo da programação mais próximo do público, oferecendo produtos modernos,
+                criativos e com identidade tech.
+                Acreditamos que comprar produtos do universo tech deve ser tão divertido quanto programar.
+                Por isso, criamos um ambiente leve, moderno e acolhedor — onde cada detalhe foi pensado
+                para proporcionar conforto, clareza e uma experiência agradável para todos os clientes.
+                Nosso atendimento é guiado pela empatia, paciência e dedicação, garantindo que você encontre
+                exatamente o que precisa, no seu tempo e com total suporte.
+            </p>
+        </section>
+        <section class="section-visao">
+            <h2>Visão</h2>
+            <p>
+                Ser referência no Brasil como a maior loja temática para devs e amantes de tecnologia.
+                Nossa equipe é formada por apaixonados por tecnologia, design e inovação.
+                São profissionais criativos, comunicativos e sempre atualizados com o mundo da programação.
+                Trabalhamos juntos para desenvolver produtos originais, manter um atendimento excepcional
+                e criar uma comunidade forte e acolhedora para todos que vivem o universo dev.
+            </p>
+        </section>
+        <section class="section-valores">
+            <h2>Valores</h2>
+            <ul>
+                <li>Inovação</li>
+                <li>Criatividade</li>
+                <li>Comunidade</li>
+                <li>Qualidade</li>
+            </ul>
+        </section>
+        <div class="banner-empresa"></div>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#"> Quem somos </a></li>
+                        <li><a href=""> nossos serviços </a></li>
+                        <li><a href=""> política de privacidade </a></li>
+                        <li><a href=""> programa de afiliados</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Obter ajuda</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Transporte</a></li>
+                        <li><a href="#">devoluções</a></li>
+                        <li><a href="#">Status De Pedido</a></li>
+                        <li><a href="#">Opções De Pagamento</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Loja online</h4>
+                    <ul>
+                        <li><a href="#">Relógio</a></li>
+                        <li><a href="#">Saco</a></li>
+                        <li><a href="#">Calçado</a></li>
+                        <li><a href="#">Endereço</a></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Se subescreva!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>subscrever</button>
+                        </form>
+                    </div>
+
+                    <div class="medias-socias">
+                        <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-x-twitter"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                    </div>
+                </div>
+
+                <div class="bandeiras-section">
+                    <div class="logo-card">
+                        <img src="/src/img/visa.webp" alt="">
+                    </div>
+                    <div class="logo-card">
+                        <img src="/src/img/mastercard.svg.png" alt="">
+                    </div>
+                    <div class="logo-card">
+                        <img src="/src/img/paypal.svg.png" alt="">
+                    </div>
+                    <div class="logo-card">
+                        <img src="/src/img/googlepay.png" alt="">
+                    </div>
+                    <div class="logo-card">
+                        <img src="/src/img/applepay.png" alt="">
+                    </div>
+                    <div class="logo-card">
+                        <img src="/src/img/pix.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/JS/cart.js"></script>
+    <script src="../src/JS/menu.js"></script>
+    <script src="../src/JS/script.js"></script>
+    <script src="../src/JS/theme.js"></script>
+</body>
+</html>
