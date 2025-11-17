@@ -8,6 +8,7 @@
 }
 
 :root{
+    --primary: #2d9acc;
     --bg: #ffffff;
     --surface: #ffffff;
     --text: #000;
@@ -307,7 +308,7 @@ ul {
 }
 
 .header.header-scrolled {
-    padding: 12px 6%;
+    padding: 0 6%;
     background: var(--transparent);
 
     box-shadow: 0 8px 32px 0 var(--shadow);
@@ -617,16 +618,18 @@ hr {
 
 .price {
     color: #2d9acc;
-    font-weight: bold;
 }
 
 .price p {
     font-size: 20px;
     display: inline-block;
+    font-weight: bold;
 }
 
 .valueOld {
     text-decoration: line-through;
+    font-size: 16px !important;
+    font-weight: bolder !important;
     color: #8f8f8f;
     margin-left: 10px;
 }
@@ -1246,6 +1249,10 @@ footer{
     .hamburger-menu {
         display: flex;
         order: -1;
+    }
+
+    .header.header-scrolled {
+        padding: 12px 6%;
     }
 
     .header {
