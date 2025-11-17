@@ -66,6 +66,32 @@
             <li><a href="#"><i class="fa-solid fa-mobile"></i> Smartphones</a></li>
         </ul>
     </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Meu Carrinho</h2>
+            <button id="close-cart" class="close-cart" aria-label="Fechar carrinho">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Seu carrinho está vazio</p>
+                <small>Adicione produtos para começar suas compras</small>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+            <button class="continue-shopping" id="continue-shopping">Continuar Comprando</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
     
     <main class="main">
        <div class="wrapper-imagen-empresa"> <img class="imagen-empresa" src="../src/img/empresa/TecnoLoja.png" alt=""></div>
